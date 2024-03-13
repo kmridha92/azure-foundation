@@ -6,7 +6,7 @@
       "value": "km"
     },
     "parTelemetryOptOut": {
-      "value": false
+      "value": true
     }
   }
 }
