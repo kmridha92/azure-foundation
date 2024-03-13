@@ -45,7 +45,17 @@
       "value": []
     },
     "parLandingZoneMgChildrenSubs": {
-      "value": {}
+      "value": {
+        "corp": {
+          "subscriptions": [
+            "9aba6b42-7aaa-4e8f-b35c-9665da3c0b0e",
+            "c01194e7-9934-4de4-860f-3aff0f2bb01e"
+          ]
+        },
+        "dmz": {
+          "subscriptions": []
+        }
+      }
     },
     "parPlatformMgChildrenSubs": {
       "value": {}
@@ -54,7 +64,9 @@
       "value": []
     },
     "parSandboxMgSubs": {
-      "value": []
+      "value": [
+        "1624e069-d8df-4789-bcd0-63ba3e3bf627"
+      ]
     },
     "parTelemetryOptOut": {
       "value": false
