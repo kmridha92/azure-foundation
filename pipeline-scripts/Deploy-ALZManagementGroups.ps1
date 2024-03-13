@@ -1,12 +1,9 @@
 param (
   [Parameter()]
-  [String]$NonRootParentManagementGroupId = "$($env:NONROOTPARENTMANAGEMENTGROUPID)",
-
-  [Parameter()]
   [String]$Location = "$($env:LOCATION)",
 
   [Parameter()]
-  [String]$TemplateFile = "upstream-releases\$($env:UPSTREAM_RELEASE_VERSION)\infra-as-code\bicep\modules\managementGroups\",
+  [String]$TemplateFile = "config\custom-modules\managementGroups.bicep",
 
   [Parameter()]
   [String]$TemplateParameterFile = "config\custom-parameters\managementGroups.parameters.all.json",
@@ -16,30 +13,13 @@ param (
 )
 
 # Parameters necessary for deployment
-
-if ($NonRootParentManagementGroupId -eq '') {
-  $inputObject = @{
-    DeploymentName        = 'alz-MGDeployment-{0}' -f ( -join (Get-Date -Format 'yyyyMMddTHHMMssffffZ')[0..63])
-    Location              = $Location
-    TemplateFile          = $TemplateFile + "managementGroups.bicep"
-    TemplateParameterFile = $TemplateParameterFile
-    WhatIf                = $WhatIfEnabled
-    Verbose               = $true
-  }
-
-  New-AzTenantDeployment @inputObject
+$inputObject = @{
+  DeploymentName        = 'alz-MGDeployment-{0}' -f ( -join (Get-Date -Format 'yyyyMMddTHHMMssffffZ')[0..63])
+  Location              = $Location
+  TemplateFile          = $TemplateFile
+  TemplateParameterFile = $TemplateParameterFile
+  WhatIf                = $WhatIfEnabled
+  Verbose               = $true
 }
 
-if ($NonRootParentManagementGroupId -ne '') {
-  $inputObject = @{
-    ManagementGroupId     = $NonRootParentManagementGroupId
-    DeploymentName        = 'alz-MGDeployment-{0}' -f ( -join (Get-Date -Format 'yyyyMMddTHHMMssffffZ')[0..63])
-    Location              = $Location
-    TemplateFile          = $TemplateFile + "managementGroupsScopeEscape.bicep"
-    TemplateParameterFile = $TemplateParameterFile
-    WhatIf                = $WhatIfEnabled
-    Verbose               = $true
-  }
-
-  New-AzManagementGroupDeployment @inputObject
-}
+New-AzTenantDeployment @inputObject

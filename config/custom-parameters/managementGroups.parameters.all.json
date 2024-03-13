@@ -9,13 +9,13 @@
       "value": ""
     },
     "parTopLevelManagementGroupDisplayName": {
-      "value": "Azure Landing Zones"
+      "value": "KMridha-MG"
     },
     "parTopLevelManagementGroupParentId": {
       "value": ""
     },
     "parLandingZoneMgAlzDefaultsEnable": {
-      "value": true
+      "value": false
     },
     "parPlatformMgAlzDefaultsEnable": {
       "value": true
@@ -24,7 +24,14 @@
       "value": false
     },
     "parLandingZoneMgChildren": {
-      "value": {}
+      "value": {
+        "corp": {
+          "displayName": "Corp"
+        },
+        "dmz": {
+          "displayName": "DMZ"
+        }
+      }
     },
     "parPlatformMgChildren": {
       "value": {}
