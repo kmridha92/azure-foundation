@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "parRoleAssignmentNameGuid": {
+      "value": "KMridha-MG"
+    },
+    "parRoleDefinitionId": {
+      "value": "ad4075b6-99f9-5133-812e-da4f70773a29"
+    },
+    "parAssigneePrincipalType": {
+      "value": "Group"
+    },
+    "parAssigneeObjectId": {
+      "value": "77e88768-4e3b-45d0-a37d-fe09d56e6a70"
+    },
+    "parTelemetryOptOut": {
+      "value": false
+    }
+  }
+}

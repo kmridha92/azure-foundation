@@ -6,10 +6,10 @@ param (
   [String]$TopLevelMGPrefix = "$($env:TOP_LEVEL_MG_PREFIX)",
 
   [Parameter()]
-  [String]$TemplateFile = "upstream-releases\$($env:UPSTREAM_RELEASE_VERSION)\infra-as-code\bicep\modules\roleAssignments\roleAssignmentManagementGroupMany.bicep",
+  [String]$TemplateFile = "upstream-releases\$($env:UPSTREAM_RELEASE_VERSION)\infra-as-code\bicep\modules\roleAssignments\roleAssignmentManagementGroup.bicep",
 
   [Parameter()]
-  [String]$TemplateParameterFile = "config\custom-parameters\roleAssignmentManagementGroupMany.servicePrincipal.parameters.all.json",
+  [String]$TemplateParameterFile = "config\custom-parameters\roleAssignmentManagementGroup.securityGroup.parameters.all.json",
 
   [Parameter()]
   [Boolean]$WhatIfEnabled = [System.Convert]::ToBoolean($($env:IS_PULL_REQUEST))
