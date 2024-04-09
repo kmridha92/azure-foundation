@@ -50,7 +50,7 @@ jobs:
         displayName: Set IS_PULL_REQUEST Variable to True
 
       - task: AzurePowerShell@5
-        displayName: "Built-in and Custom Policy Assignments Deployment"
+        displayName: "Built-in Role Assignments Deployment"
         inputs:
           azureSubscription: ${{ variables.SERVICE_CONNECTION_NAME }}
           azurePowerShellVersion: "LatestVersion"
