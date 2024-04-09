@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "parRoleAssignmentNameGuid": {
-      "value": "KMridha-MG"
+      "value": "km-landingzones"
     },
     "parRoleDefinitionId": {
       "value": "ad4075b6-99f9-5133-812e-da4f70773a29"
